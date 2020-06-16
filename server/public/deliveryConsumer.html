@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <!-- Navigation Menu -->
+    <div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper blue darken-4">
+        <a href="#!" class="brand-logo">ConsumerUI</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="consumer.html">Add Jobs</a></li>
+            <li><a href="pilotProfile.html">Drone Pilots</a></li>
+            <li><a href="deliveryConsumer.html">Deliverables</a></li>
+            <li><a href="planPilotTrip.html">Plan a Trip</a></li>
+            <li> | </li>
+            <li><a href="pilot.html">Pilot UI</a></li>
+        </ul>
+        </div>
+    </nav>
+    </div> 
+    <ul class="sidenav" id="mobile-demo">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col s2 offset-s2">
+                <img height="25px" src="img/pilot_profile.png" alt="">
+            </div>
+            <div class="col s8">Consumer Name</div>
+        </div>
+        <li><a href="consumer.html">Add Jobs</a></li>
+        <li><a href="pilotProfile.html">Drone Pilots</a></li>
+        <li><a href="deliveryConsumer.html">Deliverables</a></li>
+        <li><a href="planPilotTrip.html">Plan a Trip</a></li>
+        <hr>
+            <li><a href="pilot.html">Pilot UI</a></li>
+    </ul>
+    <div class="container">
+        <p>Simulated</p>
+        <h5>You have received your deliverables from <b>TEST PILOT</b> for <b>JOB 1</b>.</h5>
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                <input disabled value="JOB 1" id="job_name" type="text" class="validate">
+                <label for="job_name">Job Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input disabled value="TEST PILOT" id="disabled" type="text" class="validate">
+                    <label for="disabled">Drone Pilot</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input disabled value="$80/hr" id="job_nego_price" type="text" class="validate">
+                    <label class="active"for="job_nego_price">Agreed Price</label>
+                </div>
+            </div>
+            <div >
+                <h5>Deliverable Checklist</h5>
+                <p>Uncheck unsatisfying deliverables.</p>
+                <p>(Preview Only)</p>
+                    <form action="#">
+                        <div class="row" id="deliverableList" >
+                            <div class="col s6">
+                                <p>
+                                    <label>
+                                    <input class="deliverables" type="checkbox"  checked="checked"/>
+                                    <span>Video</span>
+                                    </label>
+                                </p>
+                                <div class="row">
+                                    <img src="./assets/img/status.gif" alt="">
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <p>
+                                    <label>
+                                    <input type="checkbox" class="deliverables" checked="checked"/>
+                                    <span>Photo 1</span>
+                                    </label>
+                                </p>
+                                <div class="row">
+                                    <img src="https://images.unsplash.com/photo-1521405924368-64c5b84bec60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=60 100w">
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <p>
+                                    <label>
+                                    <input class="deliverables" type="checkbox"/>
+                                    <span>Photo 2</span>
+                                    </label>
+                                </p>
+                                <div class="row">
+                                    <img src="https://images.unsplash.com/photo-1506947411487-a56738267384?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=60 100w">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </form>
+        <div id="status"></div>
+        <div class="row" id="approvalButtons">
+            <div class="col s6"> 
+                <button class="btn waves-effect waves-light green" id="accept" >Approve & Pay
+                    <i class="material-icons right">check</i>
+                </button>
+            </div>
+            <div class="col s6">
+                <button class="btn waves-effect waves-light red" id="reject" >Reject
+                    <i class="material-icons right">close</i>
+                </button>
+            </div>
+        </div>
+        <div class="col s6" id="rate">
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="rating" value="4" type="text" class="validate">
+                <label for="rating">/5 Rating</label>
+                </div>
+                <button class="btn waves-effect waves-light green" id="ratingSubmit" >Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+        <div class="col s6" id="feedbackDiv">
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="feedback" placeholder="why did you reject the deliverables" type="text" class="validate">
+                <label for="feedback">Feedback</label>
+                </div>
+                <button class="btn waves-effect waves-light red" id="feedbackSubmit" >Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    
+    <!-- Initiate SideBar Open/Close -->
+    <script type="text/javascript">
+    $('#rate').hide();
+    $('#feedbackDiv').hide();
+
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        });    
+    </script>
+    <script>
+        $('#accept').click(function(){
+            $('#status').empty();
+            if(!($('.deliverables:checked').length == $('.deliverables').length)){
+                $('#status').append(`<div class="col s12"><h5 style="background-color:palevioletred;">Please check all the deliverables to approve.</h5></div>`);
+            }else{
+                $('#status').append(`<div class="col s12"><h5 style="background-color:aquamarine;">🎊 Amazing! the drone pilot has been paid. Don't forget to rate TEST PILOT</h5></div>`);
+                $('#approvalButtons').hide();
+                $('#rate').show();
+            }
+        });
+        $('#reject').click(function(){
+            $('#status').empty();
+            $('#status').append(`<div class="col s12"><h5 style="background-color:palevioletred;">Please provide a reason below for rejection.</h5></div>`);
+            $('#approvalButtons').hide();
+            $('#feedbackDiv').show();
+
+        });
+    </script>
+    <script>
+        $("#ratingSubmit").click(function(){
+            window.location.replace("/success");
+        });   
+        $("#feedbackSubmit").click(function(){
+            $('#status').empty();
+            $('#status').append(`<div class="col s12"><h5 style="background-color:palevioletred;">The pilot has been notified & further negotiation will take place.</h5></div>`);
+            setTimeout(function(){
+                $("body").empty();
+                $('body').append(`<div class="col s12"><h5 style="background-color:palevioletred;">The pilot has been notified & further negotiation will take place. Thank you for your feedback. You will now be redirected.</h5></div>`);
+                setTimeout(function(){
+                window.location.replace("/success");
+                }, 4000)
+            }, 3000)
+
+        });          
+    </script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1334 @@
+/*
+Author       : Syed Ekram.
+Template Name: Dilwale - Responsive Website Template.
+Version      : 1.0
+*/
+/*=============================================================
+    CSS INDEX
+    =============================
+    01. GENERAL STYLE (body, link color, section-title, preloader btn, overlay, section-padding etc)
+    02. START HEADER DESIGN
+    03. BOOTSTRAP NAVIGATION OVERRIDES
+    04. START SLIDER DESIGN
+    05. START HOME PAGE DESIGN
+    06. START SECTION TOP DESIGN
+    07. START ABOUT PAGE DESIGN
+    08. START SERVICE PAGE DESIGN
+    09. START PORTFOLIO PAGE DESIGN
+    10. START FAQ PAGE DESIGN
+    11. START 404 PAGE DESIGN
+    12. START BLOG PAGE DESIGN
+    13. START CONTACT PAGE DESIGN   
+    14. START FOOTER TOP DESIGN
+    15. START FOOTER BOTTOM DESIGN
+  =============================================================*/
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+body {
+    background-color: #fff;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 14px;
+    color: #333;
+    font-weight: 300;
+}
+html,
+body { height: 100% }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin-top: 0 }
+p { line-height: 24px }
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+/*START PRELOADER DESIGN*/
+.preloader {
+    background: #FFF;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+.status,
+.status-mes {
+    background-image: url(../img/status.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    position: absolute;
+    top: 50%;
+    width: 200px;
+}
+.no-padding { padding: 0 }
+/*END PRELOADER DESIGN*/
+.section-padding { padding: 60px 0 }
+/*START SECTION TITLE DESIGN*/
+.section-title  h1 {
+    font-weight: 700;
+    font-family: "Playfair Display",sans-serif;
+    font-style: italic;
+    text-transform: capitalize;
+}
+@media only screen and (max-width:768px) { 
+    .section-title h1 { text-align: center }
+}
+@media only screen and (max-width:480px) { 
+    .section-title h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:360px) { 
+    .section-title h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:320px) { 
+    .section-title h1 { text-align: center }
+}
+.section-title span {
+    background: #333 none repeat scroll 0 0;
+    display: block;
+    height: 2px;
+    margin: 15px auto 50px;
+    width: 50px;
+}
+@media only screen and (max-width:768px) { 
+    .section-title span {
+        margin: 15px auto 50px;
+        width: 50px;
+    }
+}
+@media only screen and (max-width:480px) { 
+    .section-title span {
+        margin: 15px auto 50px;
+        width: 50px;
+    }
+}
+@media only screen and (max-width:360px) { 
+    .section-title span {
+        margin: 15px auto 50px;
+        width: 50px;
+    }
+}
+@media only screen and (max-width:320px) { 
+    .section-title span {
+        margin: 15px auto 50px;
+        width: 50px;
+    }
+}
+.white-color { color: #fff }
+.white_color_span{background: #fff!important; }
+/*END SECTION TITLE DESIGN*/
+/*BTN STYLE*/
+.btn-light-bg {
+    color: #333;
+    border: 1px solid #e8e8e9;
+    border-radius: 0;
+    font-size: 12px;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+}
+.btn-light-bg:hover,
+.btn-light-bg:focus {
+    background: #00cccc;
+    border: 1px solid #00cccc;
+    color: #fff;
+}
+.btn-theme-bg {
+    background: #D2A855 none repeat scroll 0 0;
+    border-radius: 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+.btn-theme-bg:hover,
+.btn-theme-bg:focus {
+    background: #00CCCC;
+    color: #fff;
+}
+/*END BTN STYLE*/
+/*SECTION OVERLAY*/
+.overlay {
+    background: rgba(0,0,0,0.6) none repeat scroll 0 0;
+    padding: 60px 0;
+}
+/*END SECTION OVERLAY*/
+/*
+* ----------------------------------------------------------------------------------------
+* 01.END GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+* 02.START HEADER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.header { background: #2E3537 }
+.header_social ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header_social ul li {
+    float: left;
+    width: 40px;
+}
+@media only screen and (max-width:320px) { 
+    .header_social ul li { width: 48px }
+}
+.header_social ul li a {
+    background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
+    border-left: 1px solid #4a4f51;
+    color: #fff;
+    display: block;
+    padding: 8px 14px;
+}
+.header_social ul li:last-child a { border-right: 1px solid #4A4F51 }
+.header_social ul li a i { font-size: 16px }
+.facebook:hover {
+    background: #5D82D1;
+    color: #fff;
+}
+.twitter:hover {
+    background: #40BFF5;
+    color: #fff;
+}
+.google:hover {
+    background: #EB5E4C;
+    color: #fff;
+}
+.linkedin:hover {
+    background: #238CC8;
+    color: #fff;
+}
+.pinterest:hover {
+    background: #E13138;
+    color: #fff;
+}
+.vimeo:hover {
+    background: #35C6EA;
+    color: #fff;
+}
+.header_contact ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header_contact ul li {
+    border-right: 1px solid #4A4F51;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 14px;
+    margin-right: 0px;
+    padding: 8px;
+}
+.header_contact li:first-child { border-left: 1px solid #4A4F51 }
+@media only screen and (max-width:360px) { 
+    .header_contact ul li {
+        padding: 8px;
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width:320px) { 
+    .header_contact { margin-left: 3px }
+    .header_contact ul li {
+        padding: 8px;
+        font-size: 12px;
+        margin-right: 0;
+    }
+}
+.header_contact ul li i { margin-right: 10px }
+.header_contact ul li a { color: #a4aab3 }
+.header_contact ul li a:hover {
+    text-decoration: underline;
+    color: #a4aab3;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 02.END HEADER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+/*
+ * ----------------------------------------------------------------------------------------
+ * 03.BOOTSTRAP NAVIGATION OVERRIDES
+ * ----------------------------------------------------------------------------------------
+*/
+.navbar-default {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: #fff;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #00cccc !important;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    color: #00cccc !important;
+    background-color: transparent;
+}
+.navbar-brand { padding: 10px }
+.navbar-brand img { width: 150px }
+.navbar-default .navbar-nav>li>a {
+    font-size: 14px;
+    font-weight: 400;
+}
+.navbar-default .navbar-nav>li>a:hover { color: #00cccc !important }
+.dropdown-menu > li > a {
+    border-bottom: 1px solid #e8e8e9;
+    clear: both;
+    color: #000 !important;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 9px 20px;
+    white-space: nowrap;
+}
+.navbar-default .navbar-nav>li:hover .dropdown-menu { display: block }
+.dropdown-menu { background-color: #191b1f !important }
+.dropdown-menu li a {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #aaa !important;
+    border-bottom: 0px solid #282a2f;
+}
+.dropdown-menu li a:hover {
+    color: #00cccc !important;
+    background: none;
+}
+.navbar-default.menu-top {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+.navbar-default.menu-shrink {
+    background-color: #fff;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    width: 100%;
+}
+.navbar-default.menu-top li a {
+    color: #000;
+    text-transform: capitalize;
+}
+.navbar-default .navbar-toggle {
+    background: #fff none repeat scroll 0 0;
+    border-color: #fff;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { background-color: #fff }
+.navbar-default .navbar-toggle .icon-bar { background-color: #00cccc }
+/*
+* ----------------------------------------------------------------------------------------
+* 03.END BOOTSTRAP NAVIGATION OVERRIDES
+* ----------------------------------------------------------------------------------------
+*/
+/*
+ * ----------------------------------------------------------------------------------------
+ *  04.START SLIDER DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+.ms-fullscreen-template .ms-large-text {
+color: #fff;
+font-size: 60px;
+left: 0 !important;
+line-height: 65px;
+top: 34% !important;
+text-transform: uppercase;
+}
+
+.ms-layer{color: #fff;
+letter-spacing: 2px;
+text-transform: uppercase;}
+
+.ms-fullscreen-template .ms-links {
+  left: 0 !important;
+  top: 46% !important;
+}
+.button-link {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #00cccc;
+  border-color: #02C6C6 #09C3C3 #02A7A7;
+  border-image: none;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px 1px 2px;
+  color: #fff;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 10px;
+  padding: 15px 20px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.25s ease 0s;
+}
+.slider_overlay{ background: rgba(0,0,0,0.6) none repeat scroll 0 0;}
+/*
+ * ----------------------------------------------------------------------------------------
+ *  04.END SLIDER DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------------------
+ *  05.START HOME PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+.home_feature { margin-bottom: 20px }
+.home_feature i {
+    color: #00cccc;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.home_feature h4 {
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.welcome_message { background: #00cccc }
+.message h1 {
+    font-family: "Playfair Display",sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fff;
+}
+@media only screen and (max-width:768px) { 
+    .message h1 { font-size: 30px }
+}
+@media only screen and (max-width:480px) { 
+    .message h1 { font-size: 26px }
+}
+@media only screen and (max-width:320px) { 
+    .message h1 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+.message p {
+    color: #fff;
+    margin-bottom: 30px;
+}
+/*
+ * ----------------------------------------------------------------------------------------
+ *  05.END HOME PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------------------
+ *  06.START SECTION TOP DESIGN
+ * ----------------------------------------------------------------------------------------
+*/
+.section-top { background: rgba(0, 0, 0, 0) url("../img/bg/banner.jpg") no-repeat scroll center center / cover }
+.section_overlay {
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    padding: 40px 0;
+}
+.section-top h2 {
+    color: #fff;
+    padding-top: 10px;
+}
+.menu_title .breadcrumb {
+    background: none;
+    padding-top: 10px;
+}
+.menu_title .breadcrumb li { color: #fff }
+.menu_title .breadcrumb li a {
+    color: #fff;
+    -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+}
+.menu_title .breadcrumb li a:hover { color: #00cccc }
+/*
+ * ----------------------------------------------------------------------------------------
+ *  06.END SECTION TOP DESIGN
+ * ----------------------------------------------------------------------------------------
+*/
+/*
+ * ----------------------------------------------------------------------------------------
+ *  07.START ABOUT PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+*/
+/*START FEATURE DESIGN*/
+.single_feature {
+    box-shadow: 0 2px 2px 1px #e8e8e9;
+    padding: 30px 12px;
+}
+@media only screen and (max-width:768px) { 
+    .single_feature { margin-bottom: 10px }
+}
+.single_feature i {
+    color: #fff;
+    font-size: 35px;
+    padding: 10px 0;
+}
+.single_feature h4,
+.single_feature p { color: #fff }
+.f_color_bg_one { background: #FC3950 }
+.f_color_bg_two { background: #01B59A }
+.f_color_bg_three { background: #35424F }
+.f_color_bg_four { background: #FF4C83 }
+/*END FEATURE DESIGN*/
+/*START ABOUT US*/
+.single_about {
+    border: 1px solid #e8e8e9;
+    padding: 10px;
+}
+@media only screen and (max-width:768px) { 
+    .single_about { margin-bottom: 10px }
+}
+.single_about h4 {
+    margin-bottom: 0;
+    padding: 10px 0;
+}
+.content_element a {
+    display: block;
+    position: relative;
+}
+.content_element a:before {
+    background: #00cccc none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    width: 100%;
+    z-index: 1;
+}
+.content_element a:hover:before {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.content_element a:after {
+    color: #fff;
+    content: "More About Dilwale";
+    font-size: 18px;
+    left: 35%;
+    margin-left: -50px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+    width: 200px;
+    z-index: 2;
+}
+.content_element a:hover:after {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+/*END ABOUT US*/
+/* START SKILL DESIGN */
+.progress-bar-text {
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.progress-bar-text span { float: right }
+.progress-bar {
+    background: #e8e8e9 none repeat scroll 0 0;
+    box-shadow: 0 0 0;
+    height: 2px;
+    margin: 0 0 30px;
+    position: relative;
+    width: 100%;
+}
+.progress-bar > span {
+    background: #00cccc none repeat scroll 0 0;
+    display: block;
+    height: 100%;
+    width: 0;
+}
+/* END SKILL DESIGN */
+/*START COUNT TIMER*/
+.counter {
+    padding: 30px;
+    background: rgba(255,255,255,0.1);
+}
+.counter i {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 22px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    width: 70px;
+    height: 70px;
+    font-size: 22px;
+    -webkit-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
+}
+.counter h1 {
+    font-weight: 700;
+    color: #fff;
+}
+.counter p {
+    text-transform: capitalize;
+    color: #fff;
+}
+@media only screen and (max-width:768px) { 
+    .counter p { font-size: 17px }
+}
+@media only screen and (max-width:320px) { 
+    .counter p { font-size: 17px }
+}
+/*END COUNT TIMER*/
+
+/*START TEAM DESIGN*/
+.team_item {
+height: 400px; 
+-webkit-background-size: cover;
+background-size: cover; 
+background-position: center; 
+position: relative;
+}
+.team_description h3 {
+color: #fff;
+letter-spacing: 1px;
+line-height: 30px;
+margin-bottom: 0;
+}
+.team_title { 
+color: #fff;
+margin-bottom: 0;
+}
+
+.team_description {padding-left: 30px;
+position: absolute;
+top: 10px;}
+.team_over {	position: absolute;	top: 0;	left: 0;	height: 100%;	width: 100%;	opacity: 0;	 background-repeat:no-repeat; 	 background-position:center;
+background-size:cover; -moz-transition: .45s ease-in-out;	-webkit-transition: .45s ease-in-out;	-o-transition: .45s ease-in-out;	-ms-transition: .45s ease-in-out;	transition: .45s ease-in-out;
+background-color: rgba(0, 204, 204, 0.4 );}
+.team_over ul {text-align: center;top: 45%;position: relative;}
+.team_over li {
+display: inline-block;
+height: 50px;
+padding: 10px;
+width: 50px;
+}
+.team_item:hover .team_over {opacity: 1;}
+.social_team i {color:#fff;}
+.team_over li.facebook_icon {background-color: #3b5999;}
+.team_over li.twitter_icon {background-color: #00cae9;}
+.team_over li.google_icon {background-color: #f26798;}
+.team_over li.linkedin_icon {background-color: #117bb7;}
+/*END TEAM DESIGN*/
+/*START PROMOTION DESIGN*/
+.buy_now {
+    background: #00cccc;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    padding: 20px 0;
+}
+.buy_now_title {
+    color: #fff;
+    margin-bottom: 0;
+    padding: 20px 0;
+}
+.btn-promotion-bg {
+    background: #04b6b6 none repeat scroll 0 0;
+    border: 1px solid #04b6b6;
+    border-radius: 0;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 30px;
+    -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+    margin-top: 11px;
+}
+.btn-promotion-bg:hover,
+.btn-promotion-bg:focus {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #333;
+}
+/*END PROMOTION DESIGN*/
+/*
+ * ----------------------------------------------------------------------------------------
+ *  07.END ABOUT PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+*/
+/*
+ * ----------------------------------------------------------------------------------------
+ *  08.START SERVICE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+.single_why { }
+@media only screen and (max-width:768px) { 
+    .single_why { margin-bottom: 20px }
+}
+.single_why h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.single_why p {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+}
+.single_service { margin-bottom: 25px }
+.single_service i {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #00cccc;
+}
+.single_service h4 {
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #fff;
+}
+@media only screen and (max-width:768px) { 
+    .single_service h4 { font-size: 15px }
+    .desktop { margin-bottom: 20px }
+}
+.single_service p {
+    text-align: justify;
+    color: #fff;
+}
+/*START PRICING DESIGN*/
+.pricing-content {
+    border: 1px solid #e8e8e9;
+    -webkit-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
+.pricing-content:hover {
+    box-shadow: 0px 5px 65px 0px rgba(0,0,0,0.2);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+}
+@media only screen and (max-width:768px) { 
+    .pricing-content { margin-bottom: 20px }
+}
+@media only screen and (max-width:480px) { 
+    .pricing-content { margin-bottom: 20px }
+}
+@media only screen and (max-width:360px) { 
+    .pricing-content { margin-bottom: 20px }
+}
+@media only screen and (max-width:320px) { 
+    .pricing-content { margin-bottom: 20px }
+}
+.pricing-title {
+    margin-bottom: 0px;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+.pricing-title h3 {
+    margin-bottom: 0;
+    padding: 20px 0;
+}
+.pricing-price {
+    background: #f5f5f5 none repeat scroll 0 0;
+    padding: 10px 0;
+    -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+}
+.pricing-price-color {
+    background: #00cccc none repeat scroll 0 0;
+    color: #fff;
+}
+.pricing-price h4 {
+    font-size: 40px;
+    font-style: italic;
+    font-family: playfair display;
+}
+.pricing-data p {
+    border-bottom: 1px solid #e8e8e9;
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+.pricing-content:hover .pricing-price {
+    background: #00cccc none repeat scroll 0 0;
+    color: #fff;
+}
+.pricing-order { margin: 20px 0 }
+/*END PRICING DESIGN*/
+/*START TESTIMONIAL DESIGN*/
+.cover-container img { display: inline }
+.testimonial-image {
+    border: 5px solid #e8e8e9;
+    border-radius: 500px;
+    width: 120px;
+    height: 120px;
+}
+.testimonial_text,
+.team_member { color: #fff }
+.carousel-indicators li {
+    background: #00cccc none repeat scroll 0 0;
+    border: 1px solid #00cccc;
+    border-radius: 12px;
+    height: 8px;
+    margin: 0 1px;
+    width: 8px;
+}
+.carousel-indicators .active {
+    height: 8px;
+    margin: 0 1px;
+    width: 8px;
+    border: 1px solid #fff;
+}
+#team__carousel { margin-bottom: 0px }
+#team__carousel .carousel-indicators { bottom: -40px }
+/*END TESTIMONIAL DESIGN*/
+/*START COMPANY LOGO DESIGN*/
+.company_logo img {
+    height: 100px;
+    width: 100%;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+}
+@media only screen and (max-width:480px) { 
+    .company_logo img { margin-bottom: 20px }
+}
+.company_logo img:hover { opacity: 1; filter: alpha(opacity=100) }
+/*END COMPANY LOGO DESIGN*/
+/*
+ * ----------------------------------------------------------------------------------------
+ *  08.END SERVICE PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------------------
+ * 09.START PORTFOLIO PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+.portfolio_item figure { background: #00cccc }
+.portfolio_item figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+}
+.portfolio_item figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.portfolio_item figure figcaption:before,
+.portfolio_item figure figcaption:after { pointer-events: none }
+.portfolio_item figure figcaption,
+.portfolio_item figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.portfolio_item figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.portfolio_item figure p { margin: 0 }
+.portfolio_item figure p {
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+figure.portfolio_effect:hover img { opacity: 0.3; filter: alpha(opacity=30) }
+figure.portfolio_effect figcaption:before,
+figure.portfolio_effect figcaption:after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+figure.portfolio_effect figcaption:before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+        transform: scale(0,1);
+}
+figure.portfolio_effect figcaption:after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    -ms-transform: scale(1,0);
+        transform: scale(1,0);
+}
+figure.portfolio_effect p {
+    padding: 20px 2.5em;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+figure.portfolio_effect:hover figcaption:before,
+figure.portfolio_effect:hover figcaption:after {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
+}
+figure.portfolio_effect:hover p {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+/*START PORTFOLIO SINGLE PAGE DESIGN*/
+.project_dec img,.related_project img{margin-bottom:10px;}
+.similar_p{border-bottom: 1px solid #e8e8e9;
+padding: 10px 0;
+margin-bottom: 25px;}
+.related_project  h4{color:#333;transition: all 0.4s ease 0s;}
+.related_project  h4:hover{color:#00cccc;}
+.about_project h4,.about_project_details h4,.project_dec h2{border-bottom: 1px solid #e8e8e9;
+padding: 10px 0;}
+.about_project_details{margin-bottom:20px;}
+.about_project_details ul{margin:0;padding:0;list-style:none;}
+.about_project_details ul li{padding: 5px 0;}
+.about_project_details ul li i{color: #00cccc;
+margin-right: 10px;}
+.about_project_details ul li a{color: #00cccc;
+font-weight: 700;}
+.about_project_details ul li a:hover{text-decoration:underline;}
+
+/*END PORTFOLIO SINGLE PAGE DESIGN*/
+/*
+ * ----------------------------------------------------------------------------------------
+ * 09.END PORTFOLIO PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------------------
+ * 10.START FAQ PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+.faq-box {
+    background: #fff none repeat scroll 0 0;
+    padding-top: 20px;
+}
+.faq-box h4 {
+    background: #00cccc none repeat scroll 0 0;
+    color: #fff;
+    padding: 10px 10px;
+}
+.faq-box p span {
+    color: #00cccc;
+    font-size: 22px;
+    font-weight: 700;
+}
+.faq-box-padding { padding-top: 60px }
+/*
+ * ----------------------------------------------------------------------------------------
+ * 10.END FAQ PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------------------
+ * 11.START 404 PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+.search { margin-bottom: 30px }
+.form-control-feedback {
+    color: #333;
+    line-height: 40px !important;
+    width: 60px;
+}
+.error_page h4 {
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+/*
+ * ----------------------------------------------------------------------------------------
+ * 11.END 404 PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------------------
+ *  12.START BLOG PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+/*START BLOG LEFT SIDEBAR*/
+.blog-post { margin-bottom: 50px }
+.blog_admin { overflow: hidden }
+.blog_admin h5 {
+    float: left;
+    margin-right: 20px;
+    text-transform: capitalize;
+}
+.blog_admin h5 span {
+    color: #00cccc;
+    margin-right: 10px;
+}
+.blog-post img { margin-bottom: 20px }
+.blog-post iframe {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 350px;
+}
+.blog-post h4 {
+    border-bottom: 4px double #e8e8e9;
+    font-weight: 600;
+    padding: 15px 0;
+    text-transform: uppercase;
+    -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+}
+.blog-post p { margin-bottom: 20px }
+/*START PAGINATION*/
+ul.blog_pagination li a {
+    border: 1px solid #e8e8e9;
+    border-radius: 0 !important;
+    color: #333;
+    font-size: 18px;
+    height: 40px;
+    margin: 5px;
+    padding: 6px 14px;
+    width: 40px;
+}
+ul.blog_pagination li a:hover {
+    color: #fff;
+    background: #00cccc;
+    border: 1px solid #00cccc;
+}
+/*END PAGINATION*/
+/*END BLOG LEFT SIDEBAR*/
+/*START BLOG SIDEBAR*/
+.blog_sidebar_title {
+    color: #00cccc;
+    padding-bottom: 15px;
+}
+.search,
+.recent_post,
+.video_post,
+.categories { margin-bottom: 30px }
+.recent_single {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.recent_single > a:hover { color: #28c8d6 }
+.recent_single img {
+    width: 100px;
+    height: 80px;
+    float: left;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.recent_single h4 {
+    font-size: 16px;
+    line-height: 25px;
+    -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+    color: #333;
+}
+.recent_single h4:hover { color: #00cccc }
+@media only screen and (max-width:991px) { 
+    .recent_single h4 { font-size: 12px }
+}
+.recent_single span { color: #333 }
+.recent_single span i {
+    color: #00cccc;
+    margin-right: 10px;
+}
+.categories ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.categories ul li { }
+.categories ul li a {
+    color: #333;
+    display: block;
+    padding: 5px 0;
+}
+.categories ul li a:hover { color: #00cccc }
+.categories ul li a i { margin-right: 10px }
+.video_post iframe {
+    width: 100%;
+    height: 220px;
+}
+.tag_cloud a { margin: 5px }
+/*END BLOG SIDEBAR*/
+/*
+ * ----------------------------------------------------------------------------------------
+ *  12.END BLOG PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------------------
+ *  13.START CONTACT PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+*/
+.single-address { padding: 30px }
+@media only screen and (max-width:768px) { 
+    .single-address { padding: 30px 2px }
+}
+.single-address i {
+    color: #fff;
+    font-size: 22px;
+    padding-bottom: 15px;
+}
+.single-address h4 { color: #fff }
+.single-address p {
+    color: #fff;
+    margin-bottom: 0;
+}
+.s_color_bg_one { background: #FC3950 }
+.s_color_bg_two { background: #FFA800 }
+.s_color_bg_three { background: #00AEFF }
+.contact_padding { padding-top: 60px }
+.form-control {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #e4e7e8;
+    border-radius: 0;
+    box-shadow: none;
+    color: #333;
+    height: 45px;
+}
+.form-control:focus {
+    border: 1px solid #e4e7e8;
+    box-shadow: none;
+    outline: 0 none;
+}
+.form-group  button { background: none }
+.map { height: 450px }
+/*
+ * ----------------------------------------------------------------------------------------
+ *  13.END CONTACT PAGE DESIGN
+ * ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+*  14.START FOOTER TOP DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.footer-top { background: #15191C }
+.single_footer h4 {
+    border-bottom: 4px double #1A1F23;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    text-transform: capitalize;
+}
+.single_footer p { color: #aaa }
+.single_footer i { margin-right: 10px }
+.single_footer a { color: #aaa }
+.single_footer a:hover { color: #fff }
+.single_footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.single_footer ul li a {
+    color: #aaa;
+    display: block;
+    text-transform: capitalize;
+    font-size: 13px;
+    padding: 8px 0;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+}
+.single_footer ul li a:hover {
+    color: #00cccc;
+    padding-left: 10px;
+}
+.signup input {
+    background: #0d0e11 none repeat scroll 0 0;
+    border: 1px solid #0d0e11;
+    color: #aaa;
+    float: left;
+    width: 285px;
+}
+@media only screen and (max-width:768px) { 
+    .signup input { width: 265px }
+}
+@media only screen and (max-width:360px) { 
+    .signup input { width: 255px }
+}
+@media only screen and (max-width:320px) { 
+    .signup input { width: 220px }
+}
+.signup input:focus { border: 1px solid #0d0e11 }
+.signup button {
+    background: #32353b none repeat scroll 0 0;
+    border: medium none #32353b;
+    border-radius: 0;
+    color: #bbb;
+    font-size: 17px;
+    padding: 10px 20px;
+    -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+}
+.signup button:hover,
+.signup button:focus {
+    background: #fff;
+    color: #00cccc;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 14.END FOOTER TOP DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+*  15.START FOOTER BOTTOM DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.footer {
+    background-color: #0d0e11;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.footer_copyright {
+    color: #aaa;
+    padding-top: 10px;
+}
+.footer_social ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.footer_social ul li {
+    float: left;
+    margin: 2px;
+}
+.footer_social ul li a {
+    border: 1px solid #1a1f23;
+    border-radius: 50px;
+    color: #aaa;
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 21px;
+    padding: 9px 13px;
+    -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+    width: 40px;
+    box-shadow: 0 0 0 7px transparent;
+}
+.footer_social ul li a i { }
+@media only screen and (max-width:768px) { 
+    .footer_social ul li a { font-size: 12px }
+}
+@media only screen and (max-width:360px) { 
+    .footer_social ul li a { font-size: 14px }
+}
+@media only screen and (max-width:320px) { 
+    .footer_social ul li a { font-size: 14px }
+}
+.footer_social ul li a:hover { color: #fff }
+.f_facebook:hover {
+    background: #5D82D1;
+    box-shadow: 0 0 0 0px #5D82D1;
+    border: 1px solid #5D82D1;
+}
+.f_twitter:hover {
+    background: #40BFF5;
+    box-shadow: 0 0 0 0px #40BFF5;
+    border: 1px solid #40BFF5;
+}
+.f_google:hover {
+    background: #EB5E4C;
+    box-shadow: 0 0 0 0px #EB5E4C;
+    border: 1px solid #EB5E4C;
+}
+.f_linkedin:hover {
+    background: #238CC8;
+    box-shadow: 0 0 0 0px #238CC8;
+    border: 1px solid #238CC8;
+}
+.f_pinterest:hover {
+    background: #E13138;
+    box-shadow: 0 0 0 0px #E13138;
+    border: 1px solid #E13138;
+}
+.f_vimeo:hover {
+    background: #35C6EA;
+    box-shadow: 0 0 0 0px #35C6EA;
+    border: 1px solid #35C6EA;
+}
+/*
+* ----------------------------------------------------------------------------------------
+*  15.END FOOTER BOTTOM DESIGN
+* ----------------------------------------------------------------------------------------
+*/
